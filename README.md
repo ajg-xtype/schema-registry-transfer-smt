@@ -1,6 +1,8 @@
 Schema Registry Transfer SMT
 ============================
 
+## This fork introduces MirrorMaker 2 and Confluent Kafka 7.5.1 compatibility
+
 A [Kafka Connect Single Message Transformation (SMT)][smt] that reads the serialized [wire format header][wire-format] of Confluent's `KafkaAvroSerializer`, performs a lookup against a source [Confluent Schema Registry][schema-registry] for the ID in the message, and registers that schema into a destination Registry for that topic/subject under a new ID.
 
 To be used where it is not feasible to make the destination Schema Registry as a follower to the source Registry, or when migrating topics to a new cluster.
